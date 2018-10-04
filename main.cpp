@@ -9,7 +9,7 @@ int intSplitter(int x, int len);
 int main()
 {
     int a, b, c, as, bs, cs;
-    cin >> a >> b >> c;
+    cin >> a >> b;
     cin.ignore();
     cout << " " << (a > b ? a : b) << endl;
     cout << "*" << endl;
