@@ -3,7 +3,9 @@
 
 using namespace std;
 
+int tmp_arr[]={}, nd_arr[]={};
 int intSize(int x);
+int intSplitter(int x, int len);
 int main()
 {
     int a, b, c, as, bs, cs;
@@ -51,4 +53,8 @@ int intSize(int x)
         }
         i++;
     }
+}
+int intSplitter(int x, int l)
+{
+    //for(int)
 }
