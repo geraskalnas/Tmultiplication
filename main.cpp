@@ -5,38 +5,55 @@ using namespace std;
 
 int tmp_arr[]={}, nd_arr[]={};
 int intSize(int x);
-int intSplitter(int x, int len);
+int getIntFrom(int x, int choosen, int len);
 int main()
 {
-    int a, b, c, as, bs, cs;
+    int a, b, c, as, bs, cs, t;
     cin >> a >> b;
     cin.ignore();
-    cout << " " << (a > b ? a : b) << endl;
-    cout << "*" << endl;
-    cout << " " << (a < b ? a : b) << endl;
     c = a * b;
     as = intSize(a);
     bs = intSize(b);
     cs = intSize(c);
+    t = (a > b ? a : b);
     if (cs > as && cs > bs) {
-        for (int i = 0; i < cs; i++) {
+        for (int i = 0; i < intSize(t); i++) {
+            cout << " ";
+        }
+    }
+    cout << t << endl;
+    //cout << "*" << endl;
+    t=(a < b ? a : b);
+    if (cs > as && cs > bs) {
+        for (int i = 0; i < intSize(t); i++) {
+            cout << " ";
+        }
+    }
+    cout << t << endl;
+    if (cs > as && cs > bs) {
+        for (int i = 1; i < cs; i++) {
             cout << "-";
         }
         cout << "-" << endl;
     }
     else if (as > bs) {
-        for (int i = 0; i < as; i++) {
+        for (int i = 1; i < as; i++) {
             cout << "-";
         }
         cout << "-" << endl;
     }
     else {
-        for (int i = 0; i < bs; i++) {
+        for (int i = 1; i < bs; i++) {
             cout << "-";
         }
         cout << "-" << endl;
     }
-    cout << " " << c << endl;
+    for (int i=0; cs-intSize(a*b)>i; i++){
+        cout << " ";
+    }
+    cout << b*a << endl;
+    cout << c << endl;
+    //cout << getIntFrom(12345, 5, 5) << endl;
     return 0;
 }
 int intSize(int x)
@@ -54,7 +71,11 @@ int intSize(int x)
         i++;
     }
 }
-int intSplitter(int x, int l)
+int getIntFrom(int x, int choosen, int len)
 {
-    //for(int)
+    int mo,y;
+    mo = pow(10, len-choosen+1);
+    //if(x/mo<0){x*=10;}
+    y = x / mo;
+    return y;
 }
