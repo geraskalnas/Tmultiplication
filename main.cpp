@@ -51,9 +51,8 @@ int main()
     for (int i=0; cs-intSize(a*b)>i; i++){
         cout << " ";
     }
-    cout << b*a << endl;
     cout << c << endl;
-    //cout << getIntFrom(12345, 5, 5) << endl;
+    cout << getIntFrom(12345, 2, 5) << endl;
     return 0;
 }
 int intSize(int x)
@@ -73,9 +72,15 @@ int intSize(int x)
 }
 int getIntFrom(int x, int choosen, int len)
 {
-    int mo,y;
-    mo = pow(10, len-choosen+1);
+    int mo, y, z;
+    for(int i=1; i<choosen; i++){
+        mo = pow(10, len-i);//i I 1
+        y = x / mo;
+        z = x-(y*mo);
+    }
+    mo = pow(10, len-choosen);
+    z = z / mo;
     //if(x/mo<0){x*=10;}
-    y = x / mo;
-    return y;
+    //cout << "z: " << z << endl;
+    return z;
 }
