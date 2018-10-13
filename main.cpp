@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int tmp_arr[]={}, nd_arr[]={};
+int tmp_arr[]= {}, nd_arr[]= {};
 int intSize(int x);
 int getIntFrom(int x, int choosen, int len);
 int main()
@@ -48,11 +48,13 @@ int main()
         }
         cout << "-" << endl;
     }
-    for (int i=0; cs-intSize(a*b)>i; i++){
+    for (int i=0; cs-intSize(a*b)>i; i++) {
         cout << " ";
     }
     cout << c << endl;
-    cout << getIntFrom(12345, 2, 5) << endl;
+    for(int i=1; i<6; i++) {
+        cout << "i: " << i << " && "<< getIntFrom(98765, i, 5) << endl;
+    }
     return 0;
 }
 int intSize(int x)
@@ -73,12 +75,13 @@ int intSize(int x)
 int getIntFrom(int x, int choosen, int len)
 {
     int mo, y, z;
-    for(int i=1; i<choosen; i++){
-        mo = pow(10, len-i);//i I 1
+    for(int i=0; i<choosen; i++) {
+        mo = pow(10, len-i);
         y = x / mo;
         z = x-(y*mo);
     }
     mo = pow(10, len-choosen);
+    //cout << " mo: " << mo << " z: " << z << endl;
     z = z / mo;
     //if(x/mo<0){x*=10;}
     //cout << "z: " << z << endl;
