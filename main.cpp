@@ -34,6 +34,11 @@ int main()
     }
     cout << b << endl;
 
+    for(int i=0; i<t-1; i++){
+        cout << "-";
+    }
+    cout << "-" << endl;
+
     for(int i=0; i<t-cs; i++) {
         cout << " ";
     }
@@ -65,9 +70,5 @@ int getIntFrom(int x, int choosen, int len)
         z = x-(y*mo);
     }
     mo = pow(10, len-choosen);
-    //cout << " mo: " << mo << " z: " << z << endl;
-    z = z / mo;
-    //if(x/mo<0){x*=10;}
-    //cout << "z: " << z << endl;
-    return z;
+    return z/mo;
 }
