@@ -70,5 +70,6 @@ int getIntFrom(int x, int choosen, int len)
         z = x-(y*mo);
     }
     mo = pow(10, len-choosen);
-    return z/mo;
+    y = z / mo;
+    return y;
 }
