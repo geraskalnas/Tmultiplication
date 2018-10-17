@@ -15,46 +15,30 @@ int main()
     as = intSize(a);
     bs = intSize(b);
     cs = intSize(c);
-    t = (a > b ? a : b);
-    if (cs > as && cs > bs) {
-        for (int i = 0; i < intSize(t); i++) {
-            cout << " ";
-        }
+
+    if(cs > as && cs > bs) {
+        t=cs;
+    } else if(bs>as) {
+        t = bs;
+    } else {
+        t=as;
     }
-    cout << t << endl;
-    //cout << "*" << endl;
-    t=(a < b ? a : b);
-    if (cs > as && cs > bs) {
-        for (int i = 0; i < intSize(t); i++) {
-            cout << " ";
-        }
+
+    for(int i=0; i<t-as; i++) {
+        cout << " ";
     }
-    cout << t << endl;
-    if (cs > as && cs > bs) {
-        for (int i = 1; i < cs; i++) {
-            cout << "-";
-        }
-        cout << "-" << endl;
+    cout << a << endl;
+
+    for(int i=0; i<t-bs; i++) {
+        cout << " ";
     }
-    else if (as > bs) {
-        for (int i = 1; i < as; i++) {
-            cout << "-";
-        }
-        cout << "-" << endl;
-    }
-    else {
-        for (int i = 1; i < bs; i++) {
-            cout << "-";
-        }
-        cout << "-" << endl;
-    }
-    for (int i=0; cs-intSize(a*b)>i; i++) {
+    cout << b << endl;
+
+    for(int i=0; i<t-cs; i++) {
         cout << " ";
     }
     cout << c << endl;
-    for(int i=1; i<6; i++) {
-        cout << "i: " << i << " && "<< getIntFrom(98765, i, 5) << endl;
-    }
+
     return 0;
 }
 int intSize(int x)
