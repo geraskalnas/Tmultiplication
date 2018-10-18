@@ -40,7 +40,7 @@ int main()
 
     for(int i=bs; i>0; i--) {
         tm = getIntFrom(b, i, bs)*a;
-        for(int ti=0; ti<t-intSize(tm)-3+i; ti++) {
+        for(int ti=0; ti<t-intSize(tm)+i-bs; ti++) {
             cout << " ";
         }
         cout << tm << endl;
