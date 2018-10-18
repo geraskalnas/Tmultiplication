@@ -3,12 +3,11 @@
 
 using namespace std;
 
-int tmp_arr[]= {}, nd_arr[]= {};
 int intSize(int x);
 int getIntFrom(int x, int choosen, int len);
 int main()
 {
-    int a, b, c, as, bs, cs, t;
+    int a, b, c, as, bs, cs, t, tm;
     cin >> a >> b;
     cin.ignore();
     c = a * b;
@@ -34,9 +33,17 @@ int main()
     }
     cout << b << endl;
 
-    cout << "break" << endl;
+    for(int i=0; i<t-1; i++) {
+        cout << "-";
+    }
+    cout << "-" << endl;
+
     for(int i=bs; i>0; i--) {
-        cout << getIntFrom(b, i, bs)*a << endl;
+        tm = getIntFrom(b, i, bs)*a;
+        for(int ti=0; ti<t-intSize(tm)-3+i; ti++) {
+            cout << " ";
+        }
+        cout << tm << endl;
     }
 
     for(int i=0; i<t-1; i++) {
