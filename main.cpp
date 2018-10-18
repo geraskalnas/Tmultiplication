@@ -34,7 +34,12 @@ int main()
     }
     cout << b << endl;
 
-    for(int i=0; i<t-1; i++){
+    cout << "break" << endl;
+    for(int i=bs; i>0; i--) {
+        cout << getIntFrom(b, i, bs)*a << endl;
+    }
+
+    for(int i=0; i<t-1; i++) {
         cout << "-";
     }
     cout << "-" << endl;
