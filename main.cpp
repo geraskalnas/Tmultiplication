@@ -69,18 +69,20 @@ int main()
     }
     cout << "-" << endl;
 
-    for(int i=bs; i>0; i--) {
-        tm = getIntFrom(b, i, bs)*a;
-        for(int ti=0; ti<t-intSize(tm)+i-bs; ti++) {
-            cout << " ";
-        }
-        cout << tm << endl;
-    }
-
-    for(int i=0; i<t-1; i++) {
-        cout << "-";
-    }
-    cout << "-" << endl;
+    if(bs>1){
+		for(int i=bs; i>0; i--) {
+	        tm = getIntFrom(b, i, bs)*a;
+	        for(int ti=0; ti<t-intSize(tm)+i-bs; ti++) {
+	            cout << " ";
+	        }
+	        cout << tm << endl;
+	    }
+		
+	    for(int i=0; i<t-1; i++) {
+	        cout << "-";
+	    }
+	    cout << "-" << endl;
+	}
 
     for(int i=0; i<t-cs; i++) {
         cout << " ";
