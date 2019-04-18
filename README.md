@@ -1,4 +1,5 @@
 # Tmultiplication
-g++ main.cpp -o t
+## Usage
+> $ g++ main.cpp -o t
 
-./t 96 86
+> $ ./t 96 86
